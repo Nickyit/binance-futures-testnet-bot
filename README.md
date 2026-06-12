@@ -45,10 +45,15 @@ trading_bot/
 │
 ├── bot/                      # Core bot package
 │   ├── __init__.py           # Package metadata
+│   ├── __main__.py           # Module entry point (python -m bot)
 │   ├── client.py             # Binance Testnet client wrapper
 │   ├── orders.py             # Order placement & formatting
 │   ├── validators.py         # Input validation logic
 │   └── logging_config.py     # Centralised logging setup
+│
+├── tests/                    # Unit tests
+│   ├── __init__.py
+│   └── test_validators.py    # 41 test cases for input validation
 │
 ├── logs/                     # Auto-created log directory
 │   └── bot.log               # Rotating log file
@@ -267,6 +272,16 @@ Logged events include:
 | **Binance API Error** | `BinanceAPIException` — logs status code + message |
 | **Network Error** | `BinanceRequestException` / `ConnectionError` — logged with details |
 | **Unexpected Error** | Caught by global `except`, full traceback logged to file |
+
+---
+
+## Testing
+
+Run the unit test suite (41 test cases covering all validators):
+
+```bash
+python -m unittest tests.test_validators -v
+```
 
 ---
 
