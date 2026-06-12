@@ -1,10 +1,10 @@
-# Binance Futures Testnet Trading Bot 🤖
+# Binance Futures Testnet Trading Bot
 
 A production-quality Python CLI trading bot for placing **MARKET** and **LIMIT** orders on the **Binance Futures Testnet (USDT-M)**.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Features](#features)
 - [Project Structure](#project-structure)
@@ -23,7 +23,7 @@ A production-quality Python CLI trading bot for placing **MARKET** and **LIMIT**
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---|---|
@@ -38,7 +38,7 @@ A production-quality Python CLI trading bot for placing **MARKET** and **LIMIT**
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 trading_bot/
@@ -72,20 +72,20 @@ trading_bot/
 
 ---
 
-## 🔧 Prerequisites
+## Prerequisites
 
-- **Python 3.8+** (tested on 3.10+)
+- **Python 3.8+** (tested on 3.13)
 - **pip** (Python package manager)
 - A **Binance Futures Testnet** account with API credentials
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ```bash
 # 1. Clone or download the project
-git clone <repo-url> trading_bot
-cd trading_bot
+git clone https://github.com/Nickyit/binance-futures-testnet-bot.git
+cd binance-futures-testnet-bot
 
 # 2. (Recommended) Create a virtual environment
 python -m venv venv
@@ -104,7 +104,7 @@ That's it — the project is **runnable immediately** after `pip install -r requ
 
 ---
 
-## 🔑 Testnet Setup & API Keys
+## Testnet Setup & API Keys
 
 ### Step 1 — Create a Testnet Account
 
@@ -123,13 +123,13 @@ That's it — the project is **runnable immediately** after `pip install -r requ
 
 ### Step 3 — Important Notes
 
-> ⚠️ **These are TESTNET keys** — they only work on `testnet.binancefuture.com`, not on real Binance.
+> **These are TESTNET keys** — they only work on `testnet.binancefuture.com`, not on real Binance.
 >
-> 💡 If your keys expire or stop working, simply generate a new pair from the testnet dashboard.
+> If your keys expire or stop working, simply generate a new pair from the testnet dashboard.
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ```bash
 # Copy the example env file
@@ -143,7 +143,7 @@ API_SECRET=your_testnet_api_secret_here
 
 ---
 
-## 📖 Usage
+## Usage
 
 ### MARKET Order Examples
 
@@ -182,39 +182,39 @@ python cli.py --symbol SOLUSDT --side BUY --type LIMIT --quantity 50 --price 150
 ### Sample Output
 
 ```
-╔══════════════════════════════════════════════════╗
-║            📋  ORDER REQUEST SUMMARY             ║
-╠══════════════════════════════════════════════════╣
-║  Symbol     : BTCUSDT                            ║
-║  Side       : BUY                                ║
-║  Type       : MARKET                             ║
-║  Quantity   : 0.01                               ║
-╚══════════════════════════════════════════════════╝
++==================================================+
+|            ORDER REQUEST SUMMARY                  |
++==================================================+
+|  Symbol     : BTCUSDT                            |
+|  Side       : BUY                                |
+|  Type       : MARKET                             |
+|  Quantity   : 0.01                               |
++==================================================+
 
-✅  Connected to Binance Futures Testnet successfully.
+[OK] Connected to Binance Futures Testnet successfully.
 
-╔══════════════════════════════════════════════════╗
-║           ✅  ORDER RESPONSE DETAILS             ║
-╠══════════════════════════════════════════════════╣
-║  Order ID       : 123456789                      ║
-║  Client ID      : abc123xyz                      ║
-║  Symbol         : BTCUSDT                        ║
-║  Side           : BUY                            ║
-║  Type           : MARKET                         ║
-║  Status         : FILLED                         ║
-║  Orig Quantity  : 0.01                           ║
-║  Executed Qty   : 0.01                           ║
-║  Price          : 0                              ║
-║  Avg Price      : 68452.30                       ║
-║  Update Time    : 1718234567890                  ║
-╚══════════════════════════════════════════════════╝
++==================================================+
+|            ORDER RESPONSE DETAILS                 |
++==================================================+
+|  Order ID       : 123456789                      |
+|  Client ID      : abc123xyz                      |
+|  Symbol         : BTCUSDT                        |
+|  Side           : BUY                            |
+|  Type           : MARKET                         |
+|  Status         : FILLED                         |
+|  Orig Quantity  : 0.01                           |
+|  Executed Qty   : 0.01                           |
+|  Price          : 0                              |
+|  Avg Price      : 68452.30                       |
+|  Update Time    : 1718234567890                  |
++==================================================+
 
-🎉  SUCCESS — Order 123456789 placed with status: FILLED
+[SUCCESS] Order 123456789 placed with status: FILLED
 ```
 
 ---
 
-## 🎛️ CLI Arguments
+## CLI Arguments
 
 | Argument | Required | Description |
 |---|---|---|
@@ -226,7 +226,7 @@ python cli.py --symbol SOLUSDT --side BUY --type LIMIT --quantity 50 --price 150
 
 ---
 
-## ✅ Input Validation
+## Input Validation
 
 The bot validates every input **before** contacting the API:
 
@@ -242,7 +242,7 @@ If validation fails, the bot prints a clear error and exits **without** making a
 
 ---
 
-## 📝 Logging
+## Logging
 
 All activity is logged to **`logs/bot.log`** with automatic rotation:
 
@@ -258,7 +258,7 @@ Logged events include:
 
 ---
 
-## 🛡️ Error Handling
+## Error Handling
 
 | Error Category | Handling |
 |---|---|
@@ -270,7 +270,7 @@ Logged events include:
 
 ---
 
-## 📄 License
+## License
 
 This project is provided for **educational and testing purposes only**.
 Use at your own risk. Not intended for real-money trading.
