@@ -1,0 +1,9 @@
+{
+    "pythonVersion": "3.13",
+    "pythonPlatform": "Windows",
+    "reportMissingModuleSource": false,
+    "reportMissingImports": "warning",
+    "extraPaths": [
+        "C:\\Users\\harsh\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages"
+    ]
+}
